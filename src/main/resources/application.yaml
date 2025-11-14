@@ -5,4 +5,5 @@ spring:
 
 app:
   config:
-    isBasic: false
+    isBasic: true
+
