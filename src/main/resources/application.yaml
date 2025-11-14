@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: emailTool
+
+
+app:
+  config:
+    isBasic: false
