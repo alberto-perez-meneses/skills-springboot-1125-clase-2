@@ -12,9 +12,10 @@ public class EmailToolController {
 
     private final EmailService emailService;
 
+    // todo: manuel regresar el nombre mail a email
  @GetMapping("/validation")
-    public String isValidEmail(@RequestParam String email){
-     emailService.addEmail(email);
+    public String isValidEmail(@RequestParam String mail){
+     emailService.addEmail(mail);
      return "ok";
  }
 

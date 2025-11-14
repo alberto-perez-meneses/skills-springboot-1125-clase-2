@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 @Slf4j
 @Service
+// todo: camilo cambiar constructor por anotacion de lombok
 public class EmailServiceImpl implements EmailService {
 
     private final EmailValidator emailValidator;
@@ -14,7 +15,7 @@ public class EmailServiceImpl implements EmailService {
     public EmailServiceImpl(EmailValidator emailValidator) {
         this.emailValidator = emailValidator;
     }
-
+    // todo: jhonathan agregar comentarios con uso del metodo
     @Override
     public void addEmail(String email) {
         if(!this.emailValidator.isValid(email)){
