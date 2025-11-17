@@ -9,7 +9,7 @@ public class EmailValidator {
     public boolean isValid(String email){
         return email.contains("@");
     }
-
+// todo:
     @ConditionalOnProperty(name = "app.config.isBasic", havingValue = "false", matchIfMissing = true)
     public boolean isValidByRegex(String email){
         return email != null && email.matches("^[A-Za-z0-9+_.-]+@(.+)$");
