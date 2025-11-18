@@ -1,6 +1,7 @@
 package com.ennovate.emailTool.error;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
@@ -13,5 +14,10 @@ public class GlobalControllerAdvice {
     }
 
     // todo: agregar validaciones para manejar errores de formato
+
+    @ExceptionHandler(MethodArgumentNotValidException.class)
+    public ResponseEntity<?> methodArgumentNotValidExceptionHandler(Exception ex){
+        return ResponseEntity.badRequest().body("Error de validación: ".concat(ex.getMessage()) );
+    }
 
 }
